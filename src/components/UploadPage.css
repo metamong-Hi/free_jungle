@@ -1,0 +1,56 @@
+.ReactModal__Overlay {
+  z-index: 100;
+  position: fixed;
+  top: 40px; /* 화면 상단에서 30px 여백 */
+  left: 40px; /* 화면 왼쪽에서 30px 여백 */
+  right: 40px; /* 화면 오른쪽에서 30px 여백 */
+  bottom: 40px; /* 화면 아래쪽에서 30px 여백 */
+  background-color: blue;
+  border-radius: 10px; /* 모달 모서리 둥글기 */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+  text-align: center;
+  padding: 40px 20px; /* 내부 여백 */
+  overflow-y: scroll; /* 내용이 넘칠 경우 스크롤 */
+}
+
+ 
+ .container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+}
+.button {
+  background-color: #4B5563; /* 배경색 */
+  color: white; /* 텍스트 색상 */
+  border: none; /* 테두리 제거 */
+  padding: 10px 15px; /* 내부 여백 */
+  margin: 10px; /* 버튼 간 간격 */
+  border-radius: 5px; /* 모서리 둥글게 */
+  cursor: pointer; /* 마우스 오버 시 커서 변경 */
+  font-size: 16px; /* 폰트 크기 */
+}
+
+.button:hover {
+  background-color: #374151; /* 마우스 오버 시 배경색 변경 */
+}
+
+
+
+
+.comment-box {
+  border: 2px solid #4B5563; /* 윤곽선 색상 (회색계열) */
+
+  padding: 16px; /* 내부 여백 */
+  max-width: 50%; /* 최대 너비를 화면 폭의 50%로 설정 */
+  border-radius: 8px; /* 윤곽선의 모서리를 둥글게 */
+  margin-left:20px;
+}
+
+/* 미디어 쿼리는 전체 화면 모달에 필요 없으므로 제거할 수 있습니다. */
+.react-quill {
+  min-height: 200px; /* 에디터의 최소 높이 설정 */
+  max-height: 400px; /* 에디터의 최대 높이 설정 */
+  overflow-y: auto; /* 내용이 넘칠 경우 스크롤바 표시 */
+  border: 1px solid #ccc; /* 에디터의 테두리 스타일 */
+}

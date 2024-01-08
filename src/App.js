@@ -1,23 +1,26 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-
+import ThreeCanvas from './three.jsx'; // ThreeCanvas 컴포넌트의 경로를 정확하게 지정해야 합니다.
+import Room from './room.jsx';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import IntroPage from './components/Intro.jsx';
+import { RecoilRoot } from 'recoil';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <main>
+        {/* ThreeCanvas 컴포넌트를 렌더링합니다. */}
+      <RecoilRoot>
+        <BrowserRouter>
+          <Routes>
+          <Route path={"/ground"} element={<ThreeCanvas/>}></Route> 
+              {/* <Route path={"/"} element={ <ThreeCanvas />}></Route> */}
+              <Route path={"/room/:name"} element={<Room />}></Route> 
+              <Route path={"/"} element={<IntroPage/>}></Route>        
+          </Routes>
+        </BrowserRouter>
+        </RecoilRoot>
+      </main>
     </div>
   );
 }
